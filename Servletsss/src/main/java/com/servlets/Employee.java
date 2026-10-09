@@ -1,0 +1,33 @@
+package com.servlets;
+
+public class Employee {
+	private int Eid;
+	private String Ename;
+	private int Age;
+
+	public int getEid() {
+		return Eid;
+	}
+	
+	public void setEid(int eid) {
+		this.Eid = eid;
+	}
+	
+	public String getEname() {
+		return Ename;
+	}
+	
+	public void setEname(String ename) {
+		this.Ename = ename;
+	}
+
+	public int getAge() {
+		return Age;
+	}
+		public void setAge(int Age) {
+		this.Age = Age;
+	}
+	
+	
+
+}

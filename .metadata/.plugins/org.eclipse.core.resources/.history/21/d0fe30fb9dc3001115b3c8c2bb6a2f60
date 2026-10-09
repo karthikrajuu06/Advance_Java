@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action "emp.jsp">
+empId : <input type = "Number" name = "Eid"></br>
+empName: <input type = "Text" name = "Ename"> </br>
+empAge:<input type = "Number" name = "Age"> </br>
+<button> Submit</button>
+
+ </form>
+
+</body>
+</html>
