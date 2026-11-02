@@ -14,12 +14,13 @@ public class Patient {
     private List<String> medicines;
     private Set<String> medicalTests;
     private Map<String,Integer> testFees;
-	public Patient(int patientid, String patientName, int age, String phoneNumber) {
-		super();
-		this.patientid = patientid;
-		this.patientName = patientName;
-		this.age = age;
-		this.phoneNumber = phoneNumber;
+
+	public Patient(/*int patientid, String patientName, int age, String phoneNumber */) {	
+			super();
+		//this.patientid = patientid;
+		//this.patientName = patientName;
+	//	this.age = age;
+		//this.phoneNumber = phoneNumber;
 	}
 	public int getPatientid() {
 		return patientid;

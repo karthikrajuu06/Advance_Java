@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml  version="1.0" encoding="UTF-8"?>
 
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -6,7 +6,68 @@
        http://www.springframework.org/schema/beans
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--     <bean id="hello"
-          class="com.codegnan.springcore.Hellospring"/>
- -->
+    <!-- Doctor Bean -->
+    <bean id="doctor" class="com.hms.Doctor">
+
+        <property name="doctorId" value="101"/>
+        <property name="doctorName" value="Dr. Suresh"/>
+        <property name="specialization" value="Cardiologist"/>
+
+    </bean>
+
+
+    <!-- Patient Template Bean -->
+    <bean id="patientTemplate"
+          class="com.hms.Patient"
+          abstract="true">
+
+        <property name="patientid" value="501"/>
+        <property name="patientName" value="Ravi"/>
+        <property name="age" value="21"/>
+        <property name="phoneNumber" value="1234567890"/>
+
+        <!-- Reference Injection -->
+        <property name="doctor" ref="doctor"/>
+
+        <!-- List Injection -->
+        <property name="medicines">
+            <list>
+                <value>Paracetamol</value>
+                <value>Vitamin C</value>
+                <value>Vitamin D</value>
+            </list>
+        </property>
+
+        <!-- Set Injection -->
+        <property name="medicalTests">
+            <set>
+                <value>Blood Test</value>
+                <value>ECG</value>
+                <value>X-Ray</value>
+            </set>
+        </property>
+
+        <!-- Map Injection -->
+        <property name="testFees">
+            <map>
+                <entry key="Blood Test" value="500"/>
+                <entry key="ECG" value="1000"/>
+                <entry key="X-Ray" value="1500"/>
+            </map>
+        </property>
+
+    </bean>
+
+
+    <!-- Singleton Scope -->
+    <bean id="patientSingleton"
+          parent="patientTemplate"
+          scope="singleton"/>
+
+
+    <!-- Prototype Scope -->
+    <bean id="patientPrototype"
+          parent="patientTemplate"
+          scope="prototype"/>
+
 </beans>

@@ -4,12 +4,17 @@ public class Doctor {
    private int doctorId;
    private String doctorName;
    private String specialization;
+   
 	/*
 	 * public Doctor(int doctorId, String doctorName, String specialization) {
 	 * super(); this.doctorId = doctorId; this.doctorName = doctorName;
 	 * this.specialization = specialization;
 	 */
+
+public Doctor() {
 }
+
+// creter Getters and Setters 
 public int getDoctorId() {
 	return doctorId;
 }
