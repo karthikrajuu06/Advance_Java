@@ -21,7 +21,7 @@ public class Demo1Application implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-		  Employee emp = new Employee("Bhaii",22);
+		  Employee emp = new Employee("vinay",24);
 		  
 		  es.AddEmployee(emp);
 		 
