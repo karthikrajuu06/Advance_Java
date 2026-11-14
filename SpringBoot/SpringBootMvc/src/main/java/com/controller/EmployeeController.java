@@ -1,5 +1,7 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,23 +36,19 @@ public class EmployeeController {
 	 return new ModelAndView("redirect:/employees/addEmp"); 
 	 }
 
-/*2PostMapping("/saveEmp")
-public ModelAndView saveEmp(@ModelAttribute Employee emp) {
 
-    System.out.println("========== EMPLOYEE DETAILS ==========");
-    System.out.println("Employee ID: " + emp.geteid());
-    System.out.println("Employee Name: " + emp.getename());
-    System.out.println("Employee Salary: " + emp.getSalary());
-
-    er.save(emp);
-
-    System.out.println("Employee registered successfully!");
-
-    return new ModelAndView("redirect:/employees/addEmp");
-}*/
-
+	@GetMapping("/getEmp")
+     public ModelAndView getAllEmployee() {
+		System.out.println("get employee methods");
+		List<Employee> emps = es.getAllEmp();
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("employees",emps);
+		mv.setViewName("employeelist");
+		return mv;
+		
+	}
 	
-
+	
  
 
 }
