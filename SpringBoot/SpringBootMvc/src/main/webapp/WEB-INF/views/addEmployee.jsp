@@ -1,20 +1,31 @@
-<br%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8"%>
 
+<!DOCTYPE html>
 <html>
-	<head> Adding Employee Data</head>
-	<brbbody>
-		
-		<br action="${pageContext.request.contextPath}/employees/saveEmp"
-		      method="post">
+<head>
+    <title>Employee Registration</title>
+</head>
 
-		    Employee Name: <input type="text" name="ename" required /></br>
+<body>
 
-		    Employee Salary: <input type="number" name="salary" required /></brbbody>
-		</bbody>
+    <h3>Adding Employee Data</h3>
 
-		    <input type="submit" value="Register" />
+    <form action="${pageContext.request.contextPath}/employees/saveEmp"
+          method="post">
 
-		</form>
+        Employee Name:
+        <input type="text" name="ename" required />
 
-	</body>
+        <br><br>
+ 
+        Employee Salary:
+        <input type="number" name="salary" required />
+
+        <br><br>
+
+        <input type="submit" value="Register" />
+
+    </form>
+
+</body>
 </html>
