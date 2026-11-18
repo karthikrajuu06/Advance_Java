@@ -39,8 +39,10 @@ public class EmpController {
 		es.deleteId(eid);
 	}
 	
-	
-	public Employee updateEmp(@RequestBody Employee emp,@PathVariable int eid) {
-		return es.updateEmp(emp,eid);
+	/*
+	 * @PutMapping("/{eid}") public Employee updateEmp(@RequestBody Employee
+	 * emp,@PathVariable int eid) { return es.updateEmp(emp,eid); }
+	 */
+	 
 	}
-}
+
